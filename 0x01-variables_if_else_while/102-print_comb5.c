@@ -12,7 +12,14 @@ for (b = 48; b < 57; b++)
 {
 for (c = a; c < 58; c++)
 {
+if (c != a)
+{
+p = 48;
+}
+else
+{
 p = b + 1;
+}
 for (d = p; d < 58; d++)
 {
 putchar(a);
