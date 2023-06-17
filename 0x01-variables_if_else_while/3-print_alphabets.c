@@ -10,5 +10,6 @@ for (i = 97; i <= 122; i++)
 putchar(i);
 for (p = 65; p <= 90; p++)
 putchar(p);
+putchar('\n');
 return (0);
 }
