@@ -5,17 +5,16 @@
 */
 int main(void)
 {
-int p, m;
+int p;
 for (p = 48; p <= 57; p++)
-for (m = 48; m <= 57; m++)
 {
 putchar(p);
-putchar(m);
-if (!((p == 57) && (m == 57)))
+if (p != 57)
 {
 putchar(44);
 putchar(32);
 }
 }
+putchar('\n');
 return (0);
 }
