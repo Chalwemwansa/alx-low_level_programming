@@ -12,11 +12,6 @@ for (b = 48; b < 57; b++)
 {
 for (c = a; c < 58; c++)
 {
-if (c != a)
-{
-p = 48;
-}
-else if (c == a)
 p = b + 1;
 for (d = p; d < 58; d++)
 {
