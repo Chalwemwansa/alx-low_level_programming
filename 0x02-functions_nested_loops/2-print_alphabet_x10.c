@@ -10,6 +10,6 @@ for (p = 0; p < 10; p++)
 {
 for (i = 97; i <= 122; i++)
 _putchar(i);
-}
 _putchar('\n');
+}
 }

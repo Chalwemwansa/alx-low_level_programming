@@ -2,11 +2,12 @@
 /**
  * print_times_table - prints the n times table
  * Return: 0
+ * @n: n is an integer
  */
 void print_times_table(int n)
 {
 int nu, m, p;
-if(n <= 15 && n >= 0)
+if (n <= 15 && n >= 0)
 {
 for (nu = 0; nu <= n; nu++)
 {

@@ -2,6 +2,7 @@
 /**
  *_isalpha - checks if is a letter
  *Return: 0 if not lower case and 1 if lowercase
+ *@c: an integer used
  */
 int _isalpha(int c)
 {
