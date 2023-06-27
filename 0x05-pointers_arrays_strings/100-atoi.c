@@ -7,39 +7,21 @@
  */
 int _atoi(char *s)
 {
-unsigned int v;
-int length = 0, total = 0, i, i1, value = 1;
-while (s[length] != '\0')
-length++;
-if (s[0] == '-')
+unsigned int ni = 0;
+int c = 0, min = 1, isi = 0;
+while (s[c])
+if (s[c] == 45)
+min *= -1;
+while (s[c] >= 48 && s[c] <= 57)
 {
-for (i1 = length - 1; i1 > 0; i1--)
-{
-for (i = 0; i < i1; i++)
-value *= 10;
-v = s[length - i1] * value;
-total -= v;
+isi = 1;
+ni = (ni * 10) + (s[c] - '0');
+c++
 }
+if (isi == 1)
+break;
+c++
 }
-if (s[0] == '+')
-{
-for (i1 = length - 1; i1 > 0; i1--)
-{
-for (i = 0; i < i1; i++)
-value *= 10;
-v = s[length - i1] * value;
-total += v;
-}
-}
-else
-{
-for (i1 = length; i1 > 0; i1--)
-{
-for (i = 0; i < i1; i++)
-value *= 10;
-v = s[length - i1] * value;
-total += v;
-}
-}
-return (total);
+ni *= min;
+return (ni);
 }
