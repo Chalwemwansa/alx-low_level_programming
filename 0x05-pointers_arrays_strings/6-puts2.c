@@ -11,6 +11,7 @@ void puts2(char *str)
 int k, leng = 0;
 while (str[leng])
 leng++;
+leng--;
 if (leng % 2 == 0)
 k = leng / 2;
 else
