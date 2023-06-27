@@ -6,5 +6,11 @@
  */
 void _puts(char *str)
 {
-printf("%s", str);
+int n = strlen(str) - 1;
+while (n >= 0)
+{
+_putchar(str[n]);
+n--;
+}
+_putchar('\n');
 }
