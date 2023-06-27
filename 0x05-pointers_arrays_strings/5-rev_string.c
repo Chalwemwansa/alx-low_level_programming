@@ -6,9 +6,11 @@
  */
 void rev_string(char *s)
 {
-int l = strlen(s) - 1;
+int l = -1;
+while (s[l])
+l++;
 int k = l;
-int loop = strlen(s) / 2;
+int loop = (l + 1) / 2;
 while (loop >= 0)
 {
 char v = s[l - k];
