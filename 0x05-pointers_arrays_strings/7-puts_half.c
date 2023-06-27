@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * puts_half - prints the remaining half of a string
  * Return: there is no return value
