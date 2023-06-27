@@ -7,19 +7,14 @@
  */
 void rev_string(char *s)
 {
-int l = 0, k, loop;
+int l = 0, k;
 char v;
 while (s[l])
 l++;
-l -= 2;
-k = l;
-loop = (l + 1) / 2;
-while (loop >= 0)
+for (k = 0; k <= l - 1; k++)
 {
-v = s[l - k];
-s[l - k] = s[k];
-s[k] = v;
-loop--;
-k--;
+v = s[k];
+s[k] = s[l - k - 1];
+s[l - k - 1] = v;
 }
 }
