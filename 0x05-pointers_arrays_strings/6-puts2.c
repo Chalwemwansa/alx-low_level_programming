@@ -8,18 +8,11 @@ void puts2(char *str)
 {
 
 int k, leng = 0;
-while (str[leng])
-leng++;
-leng--;
-if (leng % 2 == 0)
-k = leng / 2;
-else
-k = (leng / 2) + 1;
-int k1 = 0;
-while (k >= 0)
+while (str[leng] != '\0')
 {
-_putchar(str[k1]);
-k1 += 2;
-k--;
+leng++;
 }
+for (k = 0; k < leng; k += 2)
+_putchar(str[k]);
+_putchar('\n');
 }
