@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * _puts - prints a string to standard output
  * Return: 0;
