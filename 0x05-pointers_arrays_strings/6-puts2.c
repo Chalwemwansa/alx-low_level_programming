@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * puts2 - prints only the numbers that are even
  * Return: 0
@@ -7,7 +8,9 @@
 void puts2(char *str)
 {
 
-int k, leng = strlen(str);
+int k, leng = 0;
+while (str[leng])
+leng++;
 if (leng % 2 == 0)
 k = leng / 2;
 else
