@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * _puts - prints a string to standard output
  * Return: 0;
@@ -6,11 +6,11 @@
  */
 void _puts(char *str)
 {
-int n = strlen(str) - 1;
-while (n >= 0)
+int n = strlen(str) - 1, l = n;
+while (l >= 0)
 {
-_putchar(str[n]);
-n--;
+_putchar(str[n - l]);
+l--;
 }
 _putchar('\n');
 }
