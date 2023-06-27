@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * puts2 - prints only the numbers that are even
  * Return: 0

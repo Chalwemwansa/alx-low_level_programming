@@ -1,4 +1,4 @@
-#include "main.h"
+#include<stdio.h>
 /**
  * print_rev - prints a string in reverse
  * Return: 0
