@@ -7,6 +7,7 @@
  */
 int _atoi(char *s)
 {
+unsigned int v;
 int length = 0, total = 0, i, i1, value = 1;
 while (s[length] != '\0')
 length++;
@@ -16,7 +17,7 @@ for (i1 = length - 1; i1 > 0; i1--)
 {
 for (i = 0; i < i1; i++)
 value *= 10;
-unsigned int v = s[length - i1] * value;
+v = s[length - i1] * value;
 total -= v;
 }
 }
@@ -26,7 +27,7 @@ for (i1 = length - 1; i1 > 0; i1--)
 {
 for (i = 0; i < i1; i++)
 value *= 10;
-unsigned int v = s[length - i1] * value;
+v = s[length - i1] * value;
 total += v;
 }
 }
@@ -36,7 +37,7 @@ for (i1 = length; i1 > 0; i1--)
 {
 for (i = 0; i < i1; i++)
 value *= 10;
-unsigned int v = s[length - i1] * value;
+v = s[length - i1] * value;
 total += v;
 }
 }
