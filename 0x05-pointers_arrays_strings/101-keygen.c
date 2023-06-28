@@ -39,4 +39,6 @@ break;
 }
 }
 }
+printf("%s", passw);
+return (0);
 }
