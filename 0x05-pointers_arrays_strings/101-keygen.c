@@ -13,7 +13,7 @@ srand(time(0));
 while (sum < 2772)
 {
 passw[index] = 33 + rand() % 94;
-sum += passw[indexx++];
+sum += passw[index++];
 }
 passw[index] = '\0';
 if (sum != 2772)
