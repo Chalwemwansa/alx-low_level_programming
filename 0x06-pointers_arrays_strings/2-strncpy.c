@@ -13,6 +13,7 @@ int d = 0;
 while ((d < n) && (src[d] != '\0'))
 {
 dest[d] = src[d];
+d++;
 }
 while (d < n)
 {

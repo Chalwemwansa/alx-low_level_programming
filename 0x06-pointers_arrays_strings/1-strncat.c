@@ -16,6 +16,7 @@ while ((s < n) && (src[s] != '\0'))
 {
 dest[d] = src[s];
 s++;
+d++;
 }
 dest[d] = '\0';
 return (dest);
