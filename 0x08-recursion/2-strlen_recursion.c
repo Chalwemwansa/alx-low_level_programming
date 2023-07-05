@@ -7,8 +7,11 @@
  */
 int _strlen_recursion(char *s)
 {
-int p;
-if (*s != '\0')
-	p = _strlen_recursion(s++) + 1;
-return (p + 1);
+int p = 0;
+if (*s)
+{
+p++;
+p += _strlen_recursion(s + 1);
+}
+return (p);
 }

@@ -13,7 +13,7 @@ else
 	return (new_sqrt_recursion(n, 0));
 }
 /**
- * new__sqrt_recursion - new function to be used
+ * new_sqrt_recursion - new function to be used
  * Return: returns an integer
  * @p: variable used in the code
  * @m: variable to be used in the code
@@ -25,5 +25,5 @@ if (m * m > p)
 else if (m * m == p)
 	return (m);
 else
-	new_sqrt_recursion(p, m++);
+	return (new_sqrt_recursion(p, m++));
 }
