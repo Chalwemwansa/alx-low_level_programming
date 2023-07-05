@@ -11,7 +11,10 @@ int i = 0, i1;
 while (a[i] != '\0')
 {
 	for (i1 = 0; i1 < 8; i1++)
+	{
 		_putchar(a[i][i1]);
+	}
 _putchar('\n');
+i++;
 }
 }
