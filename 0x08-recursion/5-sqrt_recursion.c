@@ -25,5 +25,5 @@ if (m * m > p)
 else if (m * m == p)
 	return (m);
 else
-	return (new_sqrt_recursion(p, m++));
+	return (new_sqrt_recursion(p, m + 1));
 }

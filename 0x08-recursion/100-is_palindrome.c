@@ -30,7 +30,7 @@ int new_is_palindrome(char *p, char *m, int j)
 if (*p != *m)
 	return (0);
 else if ((*p == *m) && (j != 0))
-	return (new_is_palindrome(p++, m--, j--));
+	return (new_is_palindrome(p + 1, m - 1, j - 1));
 else if ((*p == *m) && (j == 0))
 	return (1);
 }
