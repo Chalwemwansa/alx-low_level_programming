@@ -8,15 +8,7 @@
  */
 int wildcmp(char *s1, char *s2)
 {
-int p = 0, m = 0;
-while (s1[p] != '\0')
-	p++;
-while (s2[m] != '\0')
-	m++;
-if (p != m)
-	return (0);
-else
-	return (new_wildcmp(s1, s2, p - 1));
+	return (new_wildcmp(s1, s2, 0));
 }
 /**
  * new_wildcmp - function for checking
@@ -29,7 +21,7 @@ int new_wildcmp(char *s0, char *s, int x)
 {
 if (s0[x] != s[x])
 	return (0);
-if ((x == 0) && (s0[x] == s[x]))
+if ((s[x] == '\0') && (s0[x] == '\0'))
 	return (1);
-return (new_wildcmp(s0, s, x - 1));
+return (new_wildcmp(s0, s, x + 1));
 }

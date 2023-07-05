@@ -27,7 +27,7 @@ return (new_is_palindrome(s, 0, i));
  */
 int new_is_palindrome(char *p, int m, int j)
 {
-if (p[m] != m[j])
+if (p[m] != p[j])
 	return (0);
 if ((p[m] == p[j]) && (j <= m))
 	return (1);
