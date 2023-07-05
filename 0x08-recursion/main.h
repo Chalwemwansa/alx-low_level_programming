@@ -11,3 +11,4 @@ int wildcmp(char *s1, char *s2);
 int new_sqrt_recursion(int p, int m);
 int new_is_prime_number(int p, int m);
 int new_is_palindrome(char *p, char *m, int j);
+int new_wildcmp(char *s0, char *s, int x);

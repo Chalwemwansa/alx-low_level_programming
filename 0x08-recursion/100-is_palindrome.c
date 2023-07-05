@@ -15,7 +15,7 @@ if (i == 0)
 else
 {
 i--;
-return (new_is_palindrome(s, s + i, i / 2));
+return (new_is_palindrome(s, 0, i));
 }
 }
 /**
@@ -25,11 +25,11 @@ return (new_is_palindrome(s, s + i, i / 2));
  * @m:variable to be used in the code
  * @j:variable to be used in the code
  */
-int new_is_palindrome(char *p, char *m, int j)
+int new_is_palindrome(char *p, int m, int j)
 {
-if (*p != *m)
+if (p[m] != m[j])
 	return (0);
-else if ((*p == *m) && (j == 0))
+if ((p[m] == p[j]) && (j <= m))
 	return (1);
-return (new_is_palindrome(p + 1, m - 1, j - 1));
+return (new_is_palindrome(p, m + 1, j - 1));
 }

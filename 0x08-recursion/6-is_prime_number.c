@@ -22,10 +22,9 @@ else
  */
 int new_is_prime_number(int p, int m)
 {
-if ((p % m == 0) && (p != m))
+if ((p % m == 0) && (m < p))
 	return (0);
-else if (p == m)
+if (p == m)
 	return (1);
-//else if ((p != m) && (p % m != 0))
 return (new_is_prime_number(p, m + 1));
 }
