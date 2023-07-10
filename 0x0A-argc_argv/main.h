@@ -1,2 +1,5 @@
+#ifndef MAIN_H
+#define MAIN_H
 int _putchar(char c);
-int myname(int argc, char *argv[]);
+int whatsmyname(int argc, char *argv[]);
+#endif
