@@ -29,13 +29,12 @@ for (p1 = 0; p1 < ac; p1++)
 p2 = 0;
 while (av[p1][p2])
 {
-if (av[p1][p2] == '\0')
-s[i4] = '\n';
-else
 s[i4] = av[p1][p2];
 i4++;
 p2++;
 }
+if (s[i4] == '\0')
+s[i4++] = '\n';
 }
 return (s);
 }
