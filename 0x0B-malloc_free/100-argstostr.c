@@ -19,7 +19,7 @@ while (av[p][i])
 	i++;
 sum += i;
 }
-s = malloc(sizeof(char) * (sum + 1));
+s = malloc(sizeof(char) * (sum + ac + 1));
 if (s == NULL)
 {
 return (NULL);
