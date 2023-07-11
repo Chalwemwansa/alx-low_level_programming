@@ -7,8 +7,8 @@
  */
 char *_strdup(char *str)
 {
-int i = 1, i1 = 0;
-if (str == NULL)
+int i = 0, i1 = 0;
+if (*str == NULL)
 	return (NULL);
 char *s;
 while (str[i] != '\0')
