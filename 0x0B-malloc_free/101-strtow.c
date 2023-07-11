@@ -7,8 +7,7 @@
  */
 char **strtow(char *str)
 {
-char **s;
 if (str == NULL || str == "")
 	return (NULL);
-return (s);
+return (0);
 }
