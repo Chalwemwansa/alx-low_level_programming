@@ -12,7 +12,7 @@ int i, i1;
 int **s;
 if (width <= 0 || height <= 0)
 	        return (NULL);
-s = malloc(sizeof(int) * ((width * height) + 1));
+s = malloc(sizeof(int *) * height + (height * width * sizeof(int)));
 if (s == NULL)
 {
 	free(s);
