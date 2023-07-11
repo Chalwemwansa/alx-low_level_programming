@@ -15,9 +15,8 @@ if (ac == 0 || av == NULL)
 for (p = 0; p < ac; p++)
 {
 i = 0;
-while (av[p][i] != '\0')
+while (av[p][i])
 	i++;
-i + 1;
 sum += i;
 }
 s = malloc(sizeof(char) * (sum + 1));
@@ -28,15 +27,15 @@ return (NULL);
 for (p1 = 0; p1 < ac; p1++)
 {
 p2 = 0;
-while (av[p1][p2] != '\0')
+while (av[p1][p2])
 {
+if (av[p1][p2] == '\0')
+s[i4] = '\n';
+else
 s[i4] = av[p1][p2];
 i4++;
 p2++;
 }
-s[i4] = '\n';
-if (p1 != ac - 1)
-i4++;
 }
 return (s);
 }
