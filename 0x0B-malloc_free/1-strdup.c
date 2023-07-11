@@ -9,10 +9,10 @@ char *_strdup(char *str)
 {
 int i = 0, i1 = 0;
 char *s;
-while (str[i])
+while (str[i] != '\0')
 	i++;
 s = malloc(sizeof(char) * i);
-if (s == NULL)
+if (s == NULL || str == NULL)
 	return (NULL);
 while (i1 < i)
 {
