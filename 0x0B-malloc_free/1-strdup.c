@@ -12,7 +12,7 @@ char *s;
 while (str[i])
 	i++;
 s = malloc(sizeof(char) * i);
-if (i == 0 || s == NULL)
+if (s == NULL)
 	return (NULL);
 while (i1 < i)
 {
