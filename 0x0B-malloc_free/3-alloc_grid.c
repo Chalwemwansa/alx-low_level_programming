@@ -24,7 +24,8 @@ s[i2] = malloc(sizeof(int) * width);
 if (s[i2] == NULL)
 {
 for (; i2 >= 0; i2--)
-	free(s[i2]);
+free(s[i2]);
+free(s);
 return (NULL);
 }
 }
