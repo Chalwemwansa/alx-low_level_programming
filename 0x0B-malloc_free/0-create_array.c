@@ -14,7 +14,7 @@ return (NULL);
 else
 {
 char *s;
-s = malloc(size + 1);
+s = malloc((size + 1) * sizeof(char));
 int i = 0;
 while (i < size)
 {
