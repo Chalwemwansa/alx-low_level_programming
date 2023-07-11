@@ -12,9 +12,12 @@ int i, i1;
 int **s;
 if (width <= 0 || height <= 0)
 	        return (NULL);
-s = malloc(sizeof(int) * width * height);
+s = malloc(sizeof(int) * ((width * height) + 1));
 if (s == NULL)
+{
+	free(s);
 	return (NULL);
+}
 for (i = 0; i < height; i++)
 {
 for (i1 = 0; i1 < width; i1++)
