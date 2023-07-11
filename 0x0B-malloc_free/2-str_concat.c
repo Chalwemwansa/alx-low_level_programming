@@ -8,7 +8,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-int i = 0, i1 = 0, i3, p;
+int i = 0, i1 = 0, i3, p, p1;
 char *s;
 if (s1 == NULL)
 {
@@ -28,9 +28,9 @@ for (p = 0; p < i; p++)
 {
 s[p] = s1[p];
 }
-for (p = i; p < i1 + i; p++)
+for (p1 = i; p1 < i1 + i; p1++)
 {
-s[p] = s2[p - i];
+s[p1] = s2[p1 - i];
 }
 return (s);
 }
