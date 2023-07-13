@@ -39,8 +39,9 @@ m++;
 }
 for (it2 = 0; it2 < n; it2++)
 {
-s[m] = s[it2];
+s[m] = s2[it2];
 m++;
 }
+s[m] = '\0';
 return (s);
 }
