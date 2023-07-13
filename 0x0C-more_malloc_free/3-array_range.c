@@ -18,8 +18,7 @@ if (p == NULL)
 	return (NULL);
 for (i = 0; i < (max - min + 1); i++)
 {
-p[i] = min;
-min++;
+p[i] = min + i;
 }
 return (p);
 }
