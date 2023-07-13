@@ -16,14 +16,14 @@ if (s1 == NULL)
 	i = 0;
 else if (s1 != NULL)
 {
-while (s1[i] != '\0')
+while (s1[i])
 	i++;
 }
 if (s2 == NULL)
 	i1 = 0;
 else if (s2 != NULL)
 {
-while (s2[i1] != '\0')
+while (s2[i1])
 	i1++;
 }
 if (n >= i1)
@@ -42,6 +42,5 @@ for (it2 = 0; it2 < n; it2++)
 s[m] = s[it2];
 m++;
 }
-s[m] = '\0';
 return (s);
 }
