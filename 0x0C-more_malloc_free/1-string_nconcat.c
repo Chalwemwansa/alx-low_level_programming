@@ -16,14 +16,14 @@ if (s1 == NULL)
 	i = 0;
 else if (s1 != NULL)
 {
-while (s1[i])
+while (s1[i] != '\0')
 	i++;
 }
 if (s2 == NULL)
 	i1 = 0;
 else if (s2 != NULL)
 {
-while (s2[i1])
+while (s2[i1] != '\0')
 	i1++;
 }
 if (n >= i1)
