@@ -29,5 +29,5 @@ s = malloc(nmemb * size);
 if (s == NULL)
 	return (NULL);
 set(nmemb * size, s);
-return (s);
+return ((void *)s);
 }
