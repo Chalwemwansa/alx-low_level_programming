@@ -14,13 +14,17 @@ unsigned int m = 0, i = 0, p, i1 = 0, it1, it2;
 if (s1 == NULL)
 	i = 0;
 else if (s1 != NULL)
-while (s1[i] != '\0')
+{
+while (s1[i])
 	i++;
+}
 if (s2 == NULL)
 	i1 = 0;
 else if (s2 != NULL)
-while (s2[i1] != '\0')
+{
+while (s2[i1])
 	i1++;
+}
 if (n >= i1)
 n = i1;
 p = i + n;
