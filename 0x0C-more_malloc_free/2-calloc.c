@@ -16,7 +16,5 @@ if (nmemb == 0 || size == 0)
 s = malloc(p);
 if (s == NULL)
 	return (NULL);
-for (i = 0; i < p; i++)
-	s[i] = 0;
 return (s);
 }
