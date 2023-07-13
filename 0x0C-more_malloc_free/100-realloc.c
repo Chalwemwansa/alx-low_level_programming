@@ -2,6 +2,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * copy - copies contents on sring
+ * Return: pointer to the copied string
+ * @new: new string
+ * @old: the old string
+ * @p: the number of elements to copy
+ */
+char *copy(char *old, char *new, int p)
+{
+int i;
+for (i = 0; ((i < p) && (old[i] != '\0')); i++)
+	new[i] = old[i];
+return (new);
+}
+/**
  * _realloc - reallocates a block of memory
  * Return: a void pointer
  * @ptr: initial pointer
@@ -11,7 +25,6 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 char *s;
-int i;
 if (new_size == old_size)
 	return (ptr);
 else if ((new_size == 0) && (ptr != NULL))
@@ -28,11 +41,9 @@ return (s);
 }
 else if (ptr != NULL)
 {
-for (i = 0; (i < old_size) && (ptr[i] != '\0'); i++)
-{
-s[i] = ptr[i];
+s = copy(ptr, s, old_size);
 }
 free(ptr);
 }
-return ((void *)s);
+return (s);
 }
