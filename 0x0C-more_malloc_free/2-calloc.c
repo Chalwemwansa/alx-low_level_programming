@@ -7,9 +7,9 @@
  * @str: variable used in the code
  * @d:variable used in the code
  */
-char *set(unsigned long int d, char *str)
+char *set(unsigned int d, char *str)
 {
-unsigned long int i;
+unsigned int i;
 for (i = 0; i < d; i++)
 str[i] = '0';
 return (str);
