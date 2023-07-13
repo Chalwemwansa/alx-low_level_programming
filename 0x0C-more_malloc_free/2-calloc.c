@@ -7,9 +7,9 @@
  * @str: variable used in the code
  * @d:variable used in the code
  */
-char *set(unsigned int d, char *str)
+char *set(unsigned long int d, char *str)
 {
-unsigned int i;
+unsigned long int i;
 for (i = 0; i < d; i++)
 str[i] = '0';
 return (str);
@@ -28,6 +28,6 @@ if (nmemb == 0 || size == 0)
 s = malloc(nmemb * size);
 if (s == NULL)
 	return (NULL);
-s = set(nmemb * size, s);
+set(nmemb * size, s);
 return (s);
 }
