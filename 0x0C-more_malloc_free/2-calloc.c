@@ -18,7 +18,7 @@ if (s == NULL)
 	return (NULL);
 for (i = 0; i < p; i++)
 {
-s[i] = (int)0;
+(int)s[i] = 0;
 }
 return (s);
 }
