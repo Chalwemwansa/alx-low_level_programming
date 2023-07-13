@@ -14,12 +14,12 @@ unsigned int i, p;
 if (nmemb == 0 || size == 0)
 	return (NULL);
 p = nmemb * size;
-s = (int *)malloc(p);
+s = malloc(p);
 if (s == NULL)
 	return (NULL);
-for (i = 0; i < p; i++)
-{
-s[i] = 0;
-}
-return ((void *)s);
+//for (i = 0; i < p; i++)
+//{
+//s[i] = 0;
+//}
+return (s);
 }
