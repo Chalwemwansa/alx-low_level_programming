@@ -21,5 +21,5 @@ for (i = 0; i < p; i++)
 {
 s[i] = 0;
 }
-return ((void)s);
+return ((void *)s);
 }
