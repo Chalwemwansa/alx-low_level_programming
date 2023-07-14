@@ -45,7 +45,7 @@ else
 s = malloc(new_size);
 if (s == NULL)
 	return (NULL);
-s = copy(ptr, s, old_size);
+s = copy((char *)ptr, s, old_size);
 free(ptr);
 return ((void *)s);
 }
