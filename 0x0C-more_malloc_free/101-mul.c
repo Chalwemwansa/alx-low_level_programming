@@ -40,7 +40,6 @@ return (n);
  */
 int main(int argc, char *argv[])
 {
-int *p;
 int result, n, n1, i, i1;
 for (i = 1; i < 3; i++)
 {
@@ -64,10 +63,8 @@ if (argc == 3)
 {
 n = _atoi(argv[1]);
 n1 = _atoi(argv[2]);
-p = malloc(sizeof(n *n1));
-p[0] = n *n1;
-_putchar(*p);
-free(p);
+result = n *n1;
+_putchar(result);
 return (0);
 }
 else
