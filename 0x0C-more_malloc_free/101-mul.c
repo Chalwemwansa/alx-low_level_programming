@@ -38,7 +38,7 @@ return (n);
  * @argc: number of arguments
  * @argv: the array of arguments
  */
-int main(int argc, char *argv[])
+main(int argc, char *argv[])
 {
 int result, n, n1;
 if (argc == 3)
@@ -47,7 +47,6 @@ n = _atoi(argv[1]);
 n1 = _atoi(argv[2]);
 result = n *n1;
 printf("%d\n", result);
-return (0);
 }
 else
 {
