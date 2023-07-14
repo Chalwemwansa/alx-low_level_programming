@@ -11,7 +11,7 @@
 char *copy(char *old, char *new, int p)
 {
 int i;
-for (i = 0; ((i < p) && (old[i] != '\0')); i++)
+for (i = 0; i < p; i++)
 	new[i] = old[i];
 return (new);
 }
