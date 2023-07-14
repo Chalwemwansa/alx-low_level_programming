@@ -38,7 +38,7 @@ return (n);
  * @argc: number of arguments
  * @argv: the array of arguments
  */
-main(int argc, char *argv[])
+void main(int argc, char *argv[])
 {
 int result, n, n1;
 if (argc == 3)
