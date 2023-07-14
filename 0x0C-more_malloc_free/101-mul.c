@@ -38,7 +38,7 @@ return (n);
  * @argc: number of arguments
  * @argv: the array of arguments
  */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 int result, n, n1, i, i1;
 for (i = 1; i < 3; i++)
@@ -55,7 +55,7 @@ _putchar('r');
 _putchar('o');
 _putchar('r');
 _putchar('\n');
-exit (98);
+return (0);
 }
 }
 }
@@ -64,7 +64,8 @@ if (argc == 3)
 n = _atoi(argv[1]);
 n1 = _atoi(argv[2]);
 result = n *n1;
-_putchar(result);
+prinf("%d\n",result);
+return (0);
 }
 else
 {
@@ -74,6 +75,6 @@ else
 	_putchar('o');
 	_putchar('r');
 	_putchar('\n');
-	exit (98);
+	return (0);
 }
 }
