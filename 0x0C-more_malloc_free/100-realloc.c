@@ -37,7 +37,8 @@ else if (ptr == NULL)
 s = malloc(new_size);
 if (s == NULL)
 return (NULL);
-return (s);
+free(ptr);
+return ((void *)s);
 }
 else
 {
@@ -46,6 +47,6 @@ if (s == NULL)
 	return (NULL);
 s = copy(ptr, s, old_size);
 free(ptr);
-return (s);
+return ((void *)s);
 }
 }
