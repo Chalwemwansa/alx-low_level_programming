@@ -38,7 +38,7 @@ return (n);
  * @argc: number of arguments
  * @argv: the array of arguments
  */
-int main(int argc, char *argv[])
+void main(int argc, char *argv[])
 {
 int result, n, n1, i, i1;
 for (i = 1; i < 3; i++)
@@ -65,7 +65,6 @@ n = _atoi(argv[1]);
 n1 = _atoi(argv[2]);
 result = n *n1;
 _putchar(result);
-return (0);
 }
 else
 {
