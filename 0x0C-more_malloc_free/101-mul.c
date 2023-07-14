@@ -51,7 +51,7 @@ printf("%d\n", result);
 else
 {
 	printf("Error\n");
-	exit (98);
+	return (0);
 }
 return (0);
 }
