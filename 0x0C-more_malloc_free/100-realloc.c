@@ -32,18 +32,20 @@ else if ((new_size == 0) && (ptr != NULL))
 free(ptr);
 return (NULL);
 }
+else if (ptr == NULL)
+{
+s = malloc(new_size);
+if (s == NULL)
+return (NULL);
+return (s);
+}
+else
+{
 s = malloc(new_size);
 if (s == NULL)
 	return (NULL);
-if (ptr == NULL)
-{
-return (s);
-}
-else if (ptr != NULL)
-{
 s = copy(ptr, s, old_size);
-}
 free(ptr);
-}
 return (s);
+}
 }
