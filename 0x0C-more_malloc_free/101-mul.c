@@ -38,7 +38,7 @@ return (n);
  * @argc: number of arguments
  * @argv: the array of arguments
  */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 int result, n, n1;
 if (argc == 3)
@@ -53,4 +53,5 @@ else
 	printf("Error\n");
 	exit (98);
 }
+return (0);
 }
