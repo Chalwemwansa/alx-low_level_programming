@@ -40,41 +40,18 @@ return (n);
  */
 int main(int argc, char *argv[])
 {
-int result, n, n1, i, i1;
+int result, n, n1;
 if (argc == 3)
 {
-for (i = 1; i < argc; i++)
-{
-for (i1 = 0; argv[i][i1] != '\0'; i1++)
-{
-if (argv[i][i1] == '-' || argv[i][i1] == '+')
-break;
-if (argv[i][i1] < '0' || argv[i][i1] > '9')
-{
-_putchar('E');
-_putchar('r');
-_putchar('r');
-_putchar('o');
-_putchar('r');
-_putchar('\n');
-exit (98);
-}
-}
-}
 n = _atoi(argv[1]);
 n1 = _atoi(argv[2]);
 result = n *n1;
-prinf("%d\n",result);
+printf("%d\n", result);
+return (0);
 }
 else
 {
-	_putchar('E');
-	_putchar('r');
-	_putchar('r');
-	_putchar('o');
-	_putchar('r');
-	_putchar('\n');
+	printf("Error\n");
 	exit (98);
 }
-return (0);
 }
