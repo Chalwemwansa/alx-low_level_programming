@@ -38,7 +38,7 @@ return (n);
  * @argc: number of arguments
  * @argv: the array of arguments
  */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 int *p;
 int result, n, n1, i, i1;
@@ -68,6 +68,7 @@ p = malloc(sizeof(n *n1));
 p[0] = n *n1;
 _putchar(*p);
 free(p);
+return (0);
 }
 else
 {
