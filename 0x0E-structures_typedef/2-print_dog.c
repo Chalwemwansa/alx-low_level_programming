@@ -12,7 +12,7 @@ if ((*d).name == NULL)
 	printf("Name: nil\n");
 else if ((*d).name != NULL)
 	printf("Name: %s\n", (*d).name);
-if ((*d).age == NULL)
+if ((*d).age == 0)
 	printf("Age: nil\n");
 else if ((*d).age != NULL)
 	printf("Age: %f\n", (*d).age);
