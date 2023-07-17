@@ -1,11 +1,4 @@
-/**
- * @SIZE: variable used in the code
- */
 #pragma once
-#ifdef SIZE
-#undef SIZE
-#define SIZE 1024
-#else
+#ifndef
 #define SIZE 1024
 #endif
-
