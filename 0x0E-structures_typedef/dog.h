@@ -6,6 +6,7 @@
  * @age: variable to be used
  * @owner: variable to be used
  */
+typedef struct dog dog_t;
 struct dog
 {
 	char *name;
