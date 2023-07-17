@@ -23,4 +23,6 @@ if ((*d).owner == NULL)
 else if ((*d).owner != NULL)
 	printf("Owner: %s\n", (*d).owner);
 }
+else
+printf("");
 }
