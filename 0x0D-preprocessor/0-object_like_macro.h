@@ -1,3 +1,6 @@
+/**
+ * @SIZE: variable used in the code
+ */
 #pragma once
 #ifdef SIZE
 #undef SIZE
