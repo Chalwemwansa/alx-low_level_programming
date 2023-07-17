@@ -17,14 +17,14 @@ while (name[i])
 	i++;
 while (owner[k])
 	k++;
-for (i1 = 0; (i1 <= i) && (name[i1] != '\0'); i1++)
+for (i1 = 0; i1 <= i; i1++)
 	namecopy[i1] = name[i1];
 while (i1 <= i)
 {
 	namecopy[i1] = '\0';
 	i1++;
 }
-for (i2 = 0; (i2 <= k) && (owner[k] != '\0'); i2++)
+for (i2 = 0; i2 <= k; i2++)
 ownercopy[i2] = owner[i2];
 while (i2 <= k)
 {
@@ -48,6 +48,6 @@ if (p == NULL)
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
-_strcp(0, 0, &(*p).name, &(*p).owner);
+_strcp(0, 0, name, owner);
 return (p);
 }
