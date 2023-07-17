@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "dog"
+#include "dog.h"
 }
 /**
  * free_dog - frees dogs
