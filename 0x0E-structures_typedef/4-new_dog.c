@@ -3,8 +3,8 @@
 #include <stdlib.h>
 /**
  * _strcp - copies strings
- * @name: a copy of the name
- * @owner: copy of owner
+ * @name1: a copy of the name
+ * @owner1: copy of owner
  * @i:parameter
  * @k:parameter
  */
@@ -48,6 +48,6 @@ if (p == NULL)
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
-_strcp(0, 0, &(*p).name, &(*p).owner);
+//_strcp(0, 0, &(*p).name, &(*p).owner);
 return (p);
 }
