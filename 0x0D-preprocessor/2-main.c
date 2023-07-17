@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#pragma once
 /**
  * main - prints the name of the function
  * Return: 0
