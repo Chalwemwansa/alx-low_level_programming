@@ -1,11 +1,4 @@
-#pragma once
-#ifdef PI
-
-#undef PI
+#ifndef PI_H
+#define PI_H
 #define PI 3.14159265359
-
-#else
-
-#define PI 3.14159265359
-
 #endif
