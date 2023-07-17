@@ -48,6 +48,6 @@ if (p == NULL)
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
-_strcp(0, 0, name, owner);
+_strcp(0, 0, &(*p).name, &(*p).owner);
 return (p);
 }
