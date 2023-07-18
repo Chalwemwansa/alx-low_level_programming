@@ -6,10 +6,10 @@
  * @age: variable to be used
  * @owner: variable to be used
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog_t;
 #endif
