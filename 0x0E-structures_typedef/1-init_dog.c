@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
+#include "main.h"
 /**
  * init_dog - initialises a function of the type dev
  * Return: void
