@@ -28,15 +28,13 @@ return (dest);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *p;
-char *Name;
-char *Owner;
-Name = strc(Name, name);
-Owner = strc(Owner, owner);
 p = malloc(sizeof(dog_t));
 if (p == NULL)
 	return (NULL);
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
+strc (name, (*p).name);
+strc(owner, (*p).owner);
 return (p);
 }
