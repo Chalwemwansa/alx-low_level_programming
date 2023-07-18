@@ -2,17 +2,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * strc - copies a string
- * Return: a character array
- * @str: the string to copy
+ * strc - copies one string into another
  * @dest: the destination string
+ * @str: the source string
  */
 char *strc(char *dest, char *str)
 {
 unsigned int i = 0;
 unsigned int j;
 while (str[i] != '\0')
-i++;
+	i++;
 for (j = 0; j < i; j++)
 	dest[j] = str[j];
 dest[j] = '\0';
@@ -28,13 +27,14 @@ return (dest);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *p;
+char Owner[30], Name[30];
+strc(Name, name);
+strc(Owner, owner);
 p = malloc(sizeof(dog_t));
 if (p == NULL)
 	return (NULL);
 (*p).name = name;
 (*p).age = age;
 (*p).owner = owner;
-strc (name, (*p).name);
-strc(owner, (*p).owner);
 return (p);
 }
