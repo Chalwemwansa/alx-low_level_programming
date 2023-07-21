@@ -7,7 +7,7 @@
  * flag - checks if string is NULL
  *
  * Return: 1 if true 0 else
- * str: the string passed to the function
+ * @str: the string passed to the function
  */
 
 unsigned int flag(const char *str)
@@ -36,6 +36,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i, check;
 
 	va_start(ar, n);
+	if (separator == NULL)
+		check = 1;
+	else
 	check = flag(separator);
 	for (i = 0; i < n; i++)
 	{

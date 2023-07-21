@@ -34,12 +34,12 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				ptr = va_arg(arg, char *);
-				if (ptr == NULL || *ptr == '\0')
-					{
-						printf("(nil)");
-						k++;
-						break;
-					}
+				if ((ptr == NULL) || (*ptr == '\0'))
+				{
+					printf("(nil)");
+					k++;
+					break;
+				}
 				printf("%s", ptr);
 				k++;
 				break;
