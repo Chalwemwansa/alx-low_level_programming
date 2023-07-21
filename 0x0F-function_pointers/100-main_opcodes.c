@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 int p, i;
-int (*ptr);
+char *ptr;
 if (argc != 2)
 {
 	printf("Error\n");
@@ -21,7 +21,7 @@ if (p < 0)
 	printf("Error\n");
 	exit(2);
 }
-ptr = (int *)main;
+ptr = (char *)main;
 for (i = 0; i < (p - 1); i++)
 {
 	printf("%02hhx ", ptr[i]);
