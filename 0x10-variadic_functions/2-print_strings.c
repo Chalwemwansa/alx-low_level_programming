@@ -46,7 +46,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 
 	va_list arg;
-	unsigned int i, check;
+	unsigned int i, check, check1;
 	char *ptr;
 
 	va_start(arg, n);
@@ -59,8 +59,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		ptr = va_arg(arg, char *);
 		if (ptr == NULL)
-			ptr = "";
-		if (flag1(ptr) != 1)
+			check1 = 1;
+		else
+			check1 = flag1(ptr);
+		if (check1 != 1)
 			printf("%s", ptr);
 		else
 			printf("(nil)");
