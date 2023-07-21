@@ -50,7 +50,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *ptr;
 
 	va_start(arg, n);
-	if (separator == NULL)
+	if (separator == NULL || separator == 0)
 		check = 1;
 	else
 	check = flag(separator);
@@ -58,7 +58,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 
 		ptr = va_arg(arg, char *);
-		if (ptr == NULL)
+		if (ptr == NULL || ptr == 0)
 			check1 = 1;
 		else
 			check1 = flag1(ptr);
