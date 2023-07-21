@@ -14,12 +14,14 @@ int main(int argc, char *argv[])
 	int i, a, b;
 
 	if (*argv[2] == 92 || *argv[2] == 46)
+	{
 		printf("Error\n");
-	                exit (99);
+		exit(99);
+	}
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -27,7 +29,7 @@ int main(int argc, char *argv[])
 	if (i == 0)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 	else
 		printf("%d\n", i);
