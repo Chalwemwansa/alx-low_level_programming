@@ -37,8 +37,9 @@ void print_all(const char * const format, ...)
 				ptr = va_arg(arg, char *);
 				if (*ptr != '\0')
 					printf("%s", ptr);
-				else
-					printf("(nil)");
+					k++;
+					break;
+				printf("(nil)");
 				k++;
 				break;
 			default:
