@@ -50,11 +50,16 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *ptr;
 
 	va_start(arg, n);
+	if (separator == NULL)
+		check = 1;
+	else
 	check = flag(separator);
 	for (i = 0; i < n; i++)
 	{
 
 		ptr = va_arg(arg, char *);
+		if (ptr == NULL)
+			ptr = "";
 		if (flag1(ptr) != 1)
 			printf("%s", ptr);
 		else
