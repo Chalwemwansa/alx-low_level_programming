@@ -17,8 +17,7 @@ void print_all(const char * const format, ...)
 		n++;
 	va_start(arg, format);
 	while (i < n)
-	{
-		k = 0;
+	{	k = 0;
 		switch (format[i])
 		{
 			case 'c':
@@ -48,9 +47,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		if ((i != n - 1) && (k == 1))
-			printf(", ");
+		printf(", ");
 		i++;
-	}
-	printf("\n");
-	va_end(arg);
-}
+	}	printf("\n");
+		va_end(arg);	}
