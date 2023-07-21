@@ -11,7 +11,7 @@
 void print_all(const char * const format, ...)
 {	va_list arg;
 	char *ptr;
-	int n = 0, i = 0, k;
+	int n = 0, i = 0, k, k1 = 0;
 
 	while (format != NULL && format[n] != '\0')
 		n++;
@@ -34,7 +34,9 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				ptr = va_arg(arg, char *);
-				if (*ptr != '\0')
+				if (ptr == NULL || *ptr == '\0')
+					k1 = 1;
+				if (k1 = 1)
 				{
 					printf("%s", ptr);
 					k++;
