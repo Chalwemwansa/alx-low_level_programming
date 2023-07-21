@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	int i, a, b;
 
-	if (*argv[2] == 92 || *argv[2] == 46)
+	if (*argv[2] == 92 || *argv[2] == 46 || *(argv[2] + 2) == '/')
 	{
 		printf("Error\n");
 		exit(99);
