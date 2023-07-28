@@ -33,7 +33,5 @@ size_t print_list(const list_t *h)
 		i++;
 	}
 	}
-	else
-		printf("Error, pointer to NULL\n");
 	return (i);
 }

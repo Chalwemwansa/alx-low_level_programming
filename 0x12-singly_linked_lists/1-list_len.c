@@ -16,7 +16,6 @@ size_t list_len(const list_t *h)
 	}
 	else
 	{
-		printf("Error!, pointer to NULL");
 		return (i);
 	}
 	head = (*h).next;
