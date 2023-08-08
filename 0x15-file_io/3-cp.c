@@ -39,7 +39,7 @@ void clos(int fd, int fd1, int f)
 	r = close(fd);
 	if (r == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	}
@@ -48,13 +48,13 @@ void clos(int fd, int fd1, int f)
 		r = close(fd);
 		if (r == -1)
 		{
-			dprintf(2, "Error: Can't close fd %d", fd);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 			exit(100);
 		}
 		r = close(fd1);
 		if (r == -1)
 		{
-			dprintf(2, "Error: Can't close fd %d", fd1);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 			exit(100);
 		}
 	}
@@ -74,6 +74,16 @@ char *create()
 	return (str);
 }
 /**
+ * ex - exits
+ *
+ * Return: nothing
+ */
+void ex(void)
+{
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
+}
+/**
  * main - copies content from one file to another
  *
  * @argv: the arguments passed from the command line
@@ -86,7 +96,7 @@ int main(int argc, char *argv[])
 	char *str;
 
 	if (argc != 3)
-		exit(97);
+		ex();
 	str = create();
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
@@ -105,6 +115,11 @@ int main(int argc, char *argv[])
 	}
 	while ((rd = read(fd, str, 1024)) > 0)
 	{
+		if (rd == -1)
+		{
+			clos(fd, fd1, 0);
+			handle(str, argv[1], argv[2], 1);
+		}
 		wr = write(fd1, str, rd);
 		if (wr == -1)
 		{
@@ -116,8 +131,5 @@ int main(int argc, char *argv[])
 	}
 	free(str);
 	clos(fd, fd1, 0);
-	if (rd == -1)
-		handle(str, argv[1], argv[2], 1);
 	return (0);
-
 }
