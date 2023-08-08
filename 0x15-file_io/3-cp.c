@@ -115,11 +115,6 @@ int main(int argc, char *argv[])
 	}
 	while ((rd = read(fd, str, 1024)) > 0)
 	{
-		if (rd == -1)
-		{
-			clos(fd, fd1, 0);
-			handle(str, argv[1], argv[2], 1);
-		}
 		wr = write(fd1, str, rd);
 		if (wr == -1)
 		{
@@ -128,6 +123,11 @@ int main(int argc, char *argv[])
 		}
 		free(str);
 		str = create();
+	}
+	if (rd == -1)
+	{
+		clos(fd, fd1, 0);
+		handle(str, argv[1], argv[2], 1);
 	}
 	free(str);
 	clos(fd, fd1, 0);
