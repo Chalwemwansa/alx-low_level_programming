@@ -13,12 +13,12 @@ void handle(char *str, char *fd, char *fd1, int f)
 	free(str);
 	if (f == 1)
 	{
-	dprintf(2, "Error: Can't read from file %s\n", fd);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fd);
 	exit(98);
 	}
 	if (f == 2)
 	{
-	dprintf(2, "Error: Can't write to %s\n", fd1);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fd1);
 	exit(99);
 	}
 }
