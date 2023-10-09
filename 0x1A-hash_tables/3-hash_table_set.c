@@ -75,24 +75,3 @@ int _strcmp(char *str1, char *str2)
 		return (1);
 	return (0);
 }
-
-/**
- * _strcp - return a copy of a string
- *
- * @news: the new string
- * @old: the old string
- * Return: void
- */
-char *_strcp(char *news, char *old)
-{
-	int p = 0;
-
-	if (old == NULL)
-		return (NULL);
-	while (old[p] != '\0')
-	{
-		news[p] = old[p];
-		p++;
-	}
-	return (news);
-}
