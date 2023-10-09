@@ -1,10 +1,10 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 - hash function to be used in the code
+ * hash_djb2 - a hash function for conputing the index to use
  *
- * @str: the string passed as parameter
- * Return: an unsigned long int value\
+ * @str: the string variable to be used as the key
+ * Return: the return value is an unsigned long int
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
@@ -13,8 +13,6 @@ unsigned long int hash_djb2(const unsigned char *str)
 
 	hash = 5381;
 	while ((c = *str++))
-	{
 		hash = ((hash << 5) + hash) + c;
-	}
 	return (hash);
 }

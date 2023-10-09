@@ -17,6 +17,6 @@ int main(void)
     hash_table_set(ht, "hetairas", "coolest");
     hash_table_set(ht, "betty", "bad");
     hash_table_set(ht, "betty", "cool");
-    hash_table_set(ht, "bettyy", "cool");
+    hash_table_set(NULL, "bettyy", "cool");
     return (EXIT_SUCCESS);
 }
