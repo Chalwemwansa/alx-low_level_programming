@@ -19,7 +19,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	while (hold != NULL)
 	{
-		if (strcmp((char *)key, (ht->array[index])->key) == 0)
+		if (_strcmp((char *)key, (ht->array[index])->key) == 0)
 			return ((ht->array[index])->value);
 		hold = (*hold).next;
 	}
