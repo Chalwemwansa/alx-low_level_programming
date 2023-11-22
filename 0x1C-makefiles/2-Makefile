@@ -1,0 +1,18 @@
+# my first useful makefile
+
+# variables
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+all: $(NAME)
+
+# code for making the executable
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# code that compiles the .c to .o file
+%.o: %.c
+	$(CC) -c $? -o $@
