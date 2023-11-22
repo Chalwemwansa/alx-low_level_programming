@@ -1,0 +1,12 @@
+# the makefile makes a file from the files school.c and main.c
+
+#variables
+CC = gcc
+SRC = main.c school.c
+
+all: school
+
+# the rule for making the school executable
+
+school: $(SRC)
+	$(CC) $(SRC) -o school
