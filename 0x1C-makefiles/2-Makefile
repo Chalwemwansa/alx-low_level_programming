@@ -15,4 +15,4 @@ $(NAME): $(OBJ)
 
 # code that compiles the .c to .o file
 %.o: %.c
-	$(CC) -c $? -o $@
+	$(CC) -c $> -o $@
