@@ -1,0 +1,6 @@
+#my first makefile
+all: school
+
+#the rule to make the school executable
+school: main.c school.c
+	gcc main.c school.c -o school
