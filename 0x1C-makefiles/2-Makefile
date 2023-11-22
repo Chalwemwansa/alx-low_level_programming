@@ -1,18 +1,23 @@
-# my first useful makefile
+# Variables
+ CC = gcc
+ SRC = main.c school.c
+ OBJ = $(SRC:.c=.o)
+ DEP = $(OBJ:.o=.d)
+ NAME = school
 
-# variables
-CC = gcc
-SRC = main.c school.c
-OBJ = $(SRC:.c=.o)
-NAME = school
+ # Compiler flags
+ CFLAGS = -Wall -MMD -MP
 
-all: $(NAME)
+ # Default target
+ all: $(NAME)
 
-# code for making the executable
+ # Rule for building the executable
+ $(NAME): $(OBJ)
+     $(CC) $(OBJ) -o $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
-
-# code that compiles the .c to .o file
+# Rule for building object files
 %.o: %.c
-	$(CC) -c $> -o $@
+	    $(CC) $(CFLAGS) -c $< -o $@
+
+# Include generated dependency files
+-include $(DEP)
