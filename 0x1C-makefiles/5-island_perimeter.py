@@ -22,20 +22,19 @@ def island_perimeter(grid):
                         sum += 1
                 except IndexError:
                     sum += 1
-                if i - 1 >= 0:
-                    try:
-                        tmp = grid[i - 1][j]
-                        if tmp == 0:
-                            sum += 1
-                    except IndexError:
+
+                try:
+                    tmp = grid[i - 1][j]
+                    if tmp == 0:
                         sum += 1
-                if j - 1 >= 0:
-                    try:
-                        tmp = grid[i][j - 1]
-                        if tmp == 0:
-                            sum += 1
-                    except IndexError:
+                except IndexError:
+                    sum += 1
+                try:
+                    tmp = grid[i][j - 1]
+                    if tmp == 0:
                         sum += 1
+                except IndexError:
+                    sum += 1
                 try:
                     tmp = grid[i][j + 1]
                     if tmp == 0:
