@@ -42,11 +42,11 @@ int jump_search(int *array, size_t size, int value)
 		if (array[i] >= value)
 		{
 			printf("Value found between indexes [%d] and [%d]\n", i - step, i);
+			if (i == 0)
+				return (linear_srch(array, i, i, value));
 			return (linear_srch(array, i - step, i, value));
 		}
 		printf("Value checked array[%d] = [%d]\n", i, array[i]);
-		if (array[i] == value)
-			return (i);
 		i += step;
 	}
 	printf("Value found between indexes [%d] and [%d]\n", i - step, i);
